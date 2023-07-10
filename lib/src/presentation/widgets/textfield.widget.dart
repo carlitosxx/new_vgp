@@ -6,6 +6,8 @@ class TextfieldWidget extends StatefulWidget {
     required this.inputType,
     required this.hint,
     required this.isPassword,
+    this.hasIcon,
+    this.icon,
     super.key,
   });
 
@@ -13,6 +15,8 @@ class TextfieldWidget extends StatefulWidget {
   final String hint;
   final TextInputType inputType;
   final bool isPassword;
+  final bool? hasIcon;
+  final IconData? icon;
 
   @override
   State<TextfieldWidget> createState() => _TextfieldWidgetState();
@@ -26,7 +30,7 @@ class _TextfieldWidgetState extends State<TextfieldWidget> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: Theme.of(context).colorScheme.onBackground.withOpacity(.05),
+        color: Theme.of(context).colorScheme.onBackground.withOpacity(.1),
       ),
       child: Stack(
         children: [
@@ -45,6 +49,18 @@ class _TextfieldWidgetState extends State<TextfieldWidget> {
                   isOpen ? Icons.visibility : Icons.visibility_off,
                   color: Theme.of(context).colorScheme.primary,
                 ),
+              ),
+            ),
+          ),
+          Visibility(
+            visible: widget.hasIcon ?? false,
+            child: Positioned(
+              left: 15,
+              top: 12,
+              child: Icon(
+                widget.icon,
+                color:
+                    Theme.of(context).colorScheme.onBackground.withOpacity(0.4),
               ),
             ),
           ),

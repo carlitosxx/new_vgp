@@ -1,13 +1,18 @@
 import 'package:i18n_extension/i18n_extension.dart';
 
+/// View Sign in
 const kButtonSignIn = 'kButtonSignIn';
 const kSignIn = 'kSignIn';
 const kSignInMessage = 'kSignInMessage';
-const kHintEmail = 'kHintEmail';
+const kHintEmailPhone = 'kHintEmailPhone';
 const kHintPassword = 'kHintPassword';
 const kForgotPassword = 'kForgotPassword';
 const kDontHaveAccount = 'kDontHaveAccount';
 const kCreateAccount = 'kCreateAccount';
+
+/// View Register
+const kRegister = 'kRegister';
+const kRegisterMessage = 'kRegisterMessage';
 
 /// This extension method contains all
 /// the strings for the view
@@ -25,11 +30,11 @@ extension SplashStrings on String {
       "en_us":
           "Please enter your account, if you do not have click on the button to create account",
       "es_es":
-          "Por favor ingrese su cuenta, si no tiene haga click en el boton crear una cuenta",
+          "Por favor ingrese su cuenta, si no tienes puedes hacer click en el botón crear una cuenta.",
     },
-    kHintEmail: {
-      "en_us": "Email address",
-      "es_es": "Correo electronico",
+    kHintEmailPhone: {
+      "en_us": "Email address / Phone",
+      "es_es": "Correo / Telefono",
     },
     kHintPassword: {
       "en_us": "Password",
@@ -46,6 +51,15 @@ extension SplashStrings on String {
     kCreateAccount: {
       "en_us": "Create account",
       "es_es": "Crear una cuenta",
+    },
+    //register
+    kRegister: {
+      "en_us": "Create an account",
+      "es_es": "Registro",
+    },
+    kRegisterMessage: {
+      "en_us": "Create your new account, we are glad that you joined us",
+      "es_es": "Cree su nueva cuenta, nos alegra que te unas a nosotros",
     },
   });
 

@@ -72,10 +72,13 @@ class SignInPhoneViewState extends ConsumerState<SignInPhoneView> {
                     ),
                     //Textfield email
                     TextfieldWidget(
-                        controller: email,
-                        inputType: TextInputType.emailAddress,
-                        isPassword: false,
-                        hint: kHintEmail.i18n),
+                      controller: email,
+                      inputType: TextInputType.emailAddress,
+                      isPassword: false,
+                      hint: kHintEmailPhone.i18n,
+                      hasIcon: true,
+                      icon: Icons.person_outline,
+                    ),
                     const SizedBox(
                       height: 16,
                     ),
@@ -84,7 +87,9 @@ class SignInPhoneViewState extends ConsumerState<SignInPhoneView> {
                         controller: password,
                         inputType: TextInputType.emailAddress,
                         isPassword: true,
-                        hint: kHintPassword.i18n),
+                        hint: kHintPassword.i18n,
+                        hasIcon: true,
+                        icon: Icons.lock_outlined),
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
