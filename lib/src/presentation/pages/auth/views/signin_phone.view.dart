@@ -29,18 +29,18 @@ class SignInPhoneViewState extends ConsumerState<SignInPhoneView> {
         primaryFocus?.unfocus();
       },
       child: Scaffold(
+        appBar: AppBar(),
         body: CustomScrollView(
           physics: const ClampingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.all(24),
+                padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
                 child: Column(
                   children: [
                     Container(
                       padding: EdgeInsets.only(
-                        top: heightSpacerBar,
-                        bottom: heightSpacerBar,
+                        bottom: heightSpacerBar / 2,
                       ),
                       child: SvgPicture.asset(
                         assetBrand,
@@ -105,7 +105,7 @@ class SignInPhoneViewState extends ConsumerState<SignInPhoneView> {
         ),
         bottomNavigationBar: Container(
           padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
-          height: 148,
+          height: 142,
           child: Column(
             children: [
               SizedBox(

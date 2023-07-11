@@ -9,6 +9,8 @@ const kHintPassword = 'kHintPassword';
 const kForgotPassword = 'kForgotPassword';
 const kDontHaveAccount = 'kDontHaveAccount';
 const kCreateAccount = 'kCreateAccount';
+const kHintEmail = 'kHintEmail';
+const kHintPhone = 'kHintPhone';
 
 /// View Register
 const kRegister = 'kRegister';
@@ -55,12 +57,20 @@ extension SplashStrings on String {
     //register
     kRegister: {
       "en_us": "Create an account",
-      "es_es": "Registro",
+      "es_es": "Crear una cuenta",
     },
     kRegisterMessage: {
-      "en_us": "Create your new account, we are glad that you joined us",
-      "es_es": "Cree su nueva cuenta, nos alegra que te unas a nosotros",
+      "en_us": "We are glad that you joined us",
+      "es_es": "Nos alegra que te unas a nosotros",
     },
+    kHintEmail: {
+      "en_us": "Email address",
+      "es_es": "Correo electronico",
+    },
+    kHintPhone: {
+      "en_us": "Phone number",
+      "es_es": "Numero de telefono",
+    }
   });
 
   /// Getter to translate the string

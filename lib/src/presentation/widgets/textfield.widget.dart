@@ -37,7 +37,7 @@ class _TextfieldWidgetState extends State<TextfieldWidget> {
           Visibility(
             visible: widget.isPassword,
             child: Positioned(
-              right: 15,
+              right: 14,
               top: 12,
               child: GestureDetector(
                 onTap: () {
@@ -55,7 +55,7 @@ class _TextfieldWidgetState extends State<TextfieldWidget> {
           Visibility(
             visible: widget.hasIcon ?? false,
             child: Positioned(
-              left: 15,
+              left: 14,
               top: 12,
               child: Icon(
                 widget.icon,
@@ -73,7 +73,7 @@ class _TextfieldWidgetState extends State<TextfieldWidget> {
               obscureText: !isOpen,
               maxLength: 50,
               keyboardType: widget.inputType,
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.start,
               decoration: InputDecoration(
                 counterText: '',
                 border: InputBorder.none,
