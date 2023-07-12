@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class TextfieldWidget extends StatefulWidget {
   const TextfieldWidget({
@@ -7,6 +8,7 @@ class TextfieldWidget extends StatefulWidget {
     required this.hint,
     required this.isPassword,
     this.hasIcon,
+    this.isPhone,
     this.icon,
     super.key,
   });
@@ -16,6 +18,7 @@ class TextfieldWidget extends StatefulWidget {
   final TextInputType inputType;
   final bool isPassword;
   final bool? hasIcon;
+  final bool? isPhone;
   final IconData? icon;
 
   @override
@@ -61,6 +64,31 @@ class _TextfieldWidgetState extends State<TextfieldWidget> {
                 widget.icon,
                 color:
                     Theme.of(context).colorScheme.onBackground.withOpacity(0.4),
+              ),
+            ),
+          ),
+          Visibility(
+            visible: widget.isPhone ?? false,
+            child: Positioned(
+              right: 14,
+              top: 0,
+              child: DropdownButton(
+                underline: const SizedBox.shrink(),
+                value: 'pe',
+                icon: const SizedBox.shrink(),
+                onChanged: (value) {},
+                items: [
+                  DropdownMenuItem(
+                    value: 'pe',
+                    child: SvgPicture.asset('assets/svg/countries/pe.svg',
+                        alignment: Alignment.centerRight, width: 30),
+                  ),
+                  // DropdownMenuItem(
+                  //   value: 'ar',
+                  //   child: SvgPicture.asset('assets/svg/countries/ar.svg',
+                  //       alignment: Alignment.centerRight, width: 30),
+                  // ),
+                ],
               ),
             ),
           ),

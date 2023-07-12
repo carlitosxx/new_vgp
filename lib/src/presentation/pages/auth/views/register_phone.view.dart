@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:new_vgp/src/presentation/pages/auth/auth.i18n.dart';
+import 'package:new_vgp/src/presentation/pages/auth/providers/register.provider.dart';
 import 'package:new_vgp/src/presentation/widgets/button.widget.dart';
 import 'package:new_vgp/src/presentation/widgets/textfield.widget.dart';
 
@@ -21,6 +22,7 @@ class RegisterPhoneViewState extends ConsumerState<RegisterPhoneView> {
   Widget build(BuildContext context) {
     const assetBrand = 'assets/svg/logo/logo.svg';
     final widthBrand = MediaQuery.of(context).size.width / 3;
+    final isActiveTermAndConditions = ref.watch(termAndConditionsProvider);
     return GestureDetector(
       behavior: HitTestBehavior.translucent,
       onTap: () {
@@ -83,6 +85,7 @@ class RegisterPhoneViewState extends ConsumerState<RegisterPhoneView> {
                     hint: kHintPhone.i18n,
                     hasIcon: true,
                     icon: Icons.phone_outlined,
+                    isPhone: true,
                   ),
                   const SizedBox(
                     height: 16,
@@ -103,11 +106,11 @@ class RegisterPhoneViewState extends ConsumerState<RegisterPhoneView> {
                     children: [
                       Checkbox(
                           activeColor: Theme.of(context).colorScheme.secondary,
-                          value: false,
+                          value: isActiveTermAndConditions,
                           onChanged: (newValue) {
-                            // setState(() {
-                            //   termAndConditionsChckbox = newValue!;
-                            // });
+                            ref
+                                .read(termAndConditionsProvider.notifier)
+                                .update((state) => !state);
                           }),
                       RichText(
                         text: TextSpan(
