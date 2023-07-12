@@ -139,7 +139,6 @@ class RegisterPhoneViewState extends ConsumerState<RegisterPhoneView> {
         ),
         bottomNavigationBar: Container(
           padding: const EdgeInsets.fromLTRB(24, 0, 24, 24),
-          // height: 148,
           child: SizedBox(
             width: double.infinity,
             child: ButtonWidget(

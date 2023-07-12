@@ -16,6 +16,11 @@ const kHintPhone = 'kHintPhone';
 const kRegister = 'kRegister';
 const kRegisterMessage = 'kRegisterMessage';
 
+/// View Forgot Password
+const kForgotPasswordTitle = 'kForgotPasswordTitle';
+const kForgotPasswordMessage = 'kForgotPasswordMessage';
+const kSend = 'kSend';
+
 /// This extension method contains all
 /// the strings for the view
 extension SplashStrings on String {
@@ -70,6 +75,21 @@ extension SplashStrings on String {
     kHintPhone: {
       "en_us": "Phone number",
       "es_es": "Numero de telefono",
+    },
+    //Forgot password
+    kForgotPasswordTitle: {
+      "en_us": "Forgot password",
+      "es_es": "Olvido la contraseña",
+    },
+    kForgotPasswordMessage: {
+      "en_us":
+          "Please enter your email address to receive a verification code.",
+      "es_es":
+          "Por favor ingrese su correo electrónico para recibir un código de verificación.",
+    },
+    kSend: {
+      "en_us": "Send",
+      "es_es": "Enviar",
     }
   });
 

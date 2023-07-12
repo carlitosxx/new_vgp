@@ -93,7 +93,11 @@ class SignInPhoneViewState extends ConsumerState<SignInPhoneView> {
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          ref
+                              .read(appRouterProvider)
+                              .pushNamed('forgot_password');
+                        },
                         child: Text(kForgotPassword.i18n),
                       ),
                     ),

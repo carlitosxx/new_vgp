@@ -28,6 +28,7 @@ flutter:
     - assets/svg/
     - assets/svg/logo/
     - assets/svg/countries/
+    - assets/svg/icons/
     # - assets/png/
   #   - images/a_dot_ham.jpeg
 
