@@ -63,12 +63,13 @@ class SignInPhoneViewState extends ConsumerState<SignInPhoneView> {
                     Text(
                       kSignInMessage.i18n,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      style: TextStyle(
+                          fontSize: 16,
                           color: Theme.of(context).colorScheme.onBackground),
                     ),
 
                     const SizedBox(
-                      height: 24,
+                      height: 16,
                     ),
                     //Textfield email
                     TextfieldWidget(
@@ -98,7 +99,9 @@ class SignInPhoneViewState extends ConsumerState<SignInPhoneView> {
                               .read(appRouterProvider)
                               .pushNamed('forgot_password');
                         },
-                        child: Text(kForgotPassword.i18n),
+                        child: Text(kForgotPassword.i18n,
+                            style:
+                                const TextStyle(fontWeight: FontWeight.bold)),
                       ),
                     ),
                   ],

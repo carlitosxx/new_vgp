@@ -116,16 +116,17 @@ class RegisterPhoneViewState extends ConsumerState<RegisterPhoneView> {
                         text: TextSpan(
                           children: [
                             TextSpan(
-                                text: 'Yo acepto los ',
+                                text: kIAgree.i18n,
                                 style: TextStyle(
                                     color: Theme.of(context)
                                         .colorScheme
                                         .onBackground)),
                             TextSpan(
-                              text: 'Terminos y Condiciones',
+                              text: kTermAndConditions.i18n,
                               style: TextStyle(
-                                  color:
-                                      Theme.of(context).colorScheme.secondary),
+                                color: Theme.of(context).colorScheme.secondary,
+                                fontWeight: FontWeight.bold,
+                              ),
                             )
                           ],
                         ),

@@ -8,7 +8,8 @@ const lightColorScheme = ColorScheme(
   // primaryContainer: Color(0xFFEADDFF),
   primaryContainer: Color(0xFFCAE2E2),
   onPrimaryContainer: Color(0xFF21005D),
-  secondary: Color(0xFF625B71),
+  // secondary: Color(0xFF625B71),
+  secondary: Color(0xFF4D9090),
   onSecondary: Color(0xFFFFFFFF),
   secondaryContainer: Color(0xFFE8DEF8),
   onSecondaryContainer: Color(0xFF1D192B),
@@ -43,6 +44,7 @@ const darkColorScheme = ColorScheme(
   onPrimary: Color(0xFF458282),
   primaryContainer: Color(0xFF4D9090),
   onPrimaryContainer: Color(0xFFCAE2E2),
+
   // bg_checkBox,
   secondary: Color(0xFFCAE2E2),
   onSecondary: Color(0xFF332D41),

@@ -15,11 +15,26 @@ const kHintPhone = 'kHintPhone';
 /// View Register
 const kRegister = 'kRegister';
 const kRegisterMessage = 'kRegisterMessage';
+const kIAgree = 'kIAgree';
+const kTermAndConditions = 'kTermAndConditions';
 
 /// View Forgot Password
 const kForgotPasswordTitle = 'kForgotPasswordTitle';
 const kForgotPasswordMessage = 'kForgotPasswordMessage';
 const kSend = 'kSend';
+const kTryAnotherWay = 'kTryAnotherWay';
+
+/// View verify your account
+const kVerifyYourEmail = 'kVerifyYourEmail';
+const kPleaseEnterYourCode = 'kPleaseEnterYourCode';
+const kDidntReceiveCode = 'kDidntReceiveCode';
+const kResend = 'kResend';
+
+/// View create new password
+const kCreateNewPassword = 'kCreateNewPassword';
+const kCreatePasswordMessage = 'kCreatePasswordMessage';
+const kNewPassword = 'kNewPassword';
+const kConfirmNewPassword = 'kConfirmNewPassword';
 
 /// This extension method contains all
 /// the strings for the view
@@ -76,6 +91,14 @@ extension SplashStrings on String {
       "en_us": "Phone number",
       "es_es": "Numero de telefono",
     },
+    kIAgree: {
+      "en_us": "I agree to ",
+      "es_es": "Yo acepto los ",
+    },
+    kTermAndConditions: {
+      "en_us": "Terms and conditions",
+      "es_es": "Terminos y condiciones",
+    },
     //Forgot password
     kForgotPasswordTitle: {
       "en_us": "Forgot password",
@@ -90,7 +113,44 @@ extension SplashStrings on String {
     kSend: {
       "en_us": "Send",
       "es_es": "Enviar",
-    }
+    },
+    kTryAnotherWay: {
+      "en_us": "Try another way",
+      "es_es": "Intentar de otra forma",
+    },
+    kVerifyYourEmail: {
+      "en_us": "Verify your email",
+      "es_es": "Verifique su correo",
+    },
+    kPleaseEnterYourCode: {
+      "en_us": "Please enter your code",
+      "es_es": "Por favor ingrese su codigo",
+    },
+    kDidntReceiveCode: {
+      "en_us": "Didn't receive a code?",
+      "es_es": "No recibiste un codigo?",
+    },
+    kResend: {
+      "en_us": "Resend",
+      "es_es": "Reenviar",
+    },
+    kCreateNewPassword: {
+      "en_us": "Create new password",
+      "es_es": "Crear nueva contraseña",
+    },
+    kCreatePasswordMessage: {
+      "en_us":
+          "Your new password must be differnt from previously used password",
+      "es_es": "Su nueva clave debe ser diferente a la clave anterior",
+    },
+    kNewPassword: {
+      "en_us": "New password",
+      "es_es": "Nueva contraseña",
+    },
+    kConfirmNewPassword: {
+      "en_us": "Confirm new password",
+      "es_es": "Confirmar nueva contraseña",
+    },
   });
 
   /// Getter to translate the string
